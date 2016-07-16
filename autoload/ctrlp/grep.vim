@@ -2,7 +2,7 @@
 " Description:  CtrlP grep extension
 " Author:       Alexander Skachko <alexander.skachko@gmail.com>
 " Homepage:     https://github.com/lucerion/ctrlp-grep
-" Version:      1.0
+" Version:      1.1
 " Licence:      BSD-3-Clause
 " ==============================================================
 
@@ -19,9 +19,10 @@ call add(g:ctrlp_ext_vars, {
   \ 'type': 'line'
   \ })
 
-func! ctrlp#grep#run(pattern, ...)
-  let l:dirs = empty(a:000) ? '.' : join(a:000)
-  let s:result = system(g:ctrlp_grep_command . ' ' . a:pattern . ' ' . l:dirs)
+func! ctrlp#grep#run(...)
+  let l:pattern = get(a:000, 0, expand('<cword>'))
+  let l:dirs = a:0 > 1 ? join(a:000[1:-1]) : '.'
+  let s:result = system(g:ctrlp_grep_command . ' ' . l:pattern . ' ' . l:dirs)
   call ctrlp#init(ctrlp#grep#id())
 endfunc
 
