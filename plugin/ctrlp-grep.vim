@@ -2,7 +2,7 @@
 " Description:  CtrlP grep extension
 " Author:       Alexander Skachko <alexander.skachko@gmail.com>
 " Homepage:     https://github.com/lucerion/ctrlp-grep
-" Version:      1.1
+" Version:      1.2
 " Licence:      BSD-3-Clause
 " ==============================================================
 

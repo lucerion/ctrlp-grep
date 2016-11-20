@@ -2,7 +2,7 @@
 " Description:  CtrlP grep extension
 " Author:       Alexander Skachko <alexander.skachko@gmail.com>
 " Homepage:     https://github.com/lucerion/ctrlp-grep
-" Version:      1.1
+" Version:      1.2
 " Licence:      BSD-3-Clause
 " ==============================================================
 
@@ -13,10 +13,11 @@ endif
 
 call add(g:ctrlp_ext_vars, {
   \ 'init': 'ctrlp#grep#init()',
-  \ 'accept': 'ctrlp#acceptfile',
+  \ 'accept': 'ctrlp#grep#accept',
   \ 'lname': 'grep',
   \ 'sname': 'grep',
-  \ 'type': 'line'
+  \ 'type': 'line',
+  \ 'opmul': 1
   \ })
 
 func! ctrlp#grep#run(...)
@@ -32,6 +33,18 @@ endfunc
 
 func! ctrlp#grep#id()
   return g:ctrlp_builtins + len(g:ctrlp_ext_vars)
+endfunc
+
+func! ctrlp#grep#accept(mode, str)
+  let l:marked_list = ctrlp#getmarkedlist()
+
+  if empty(l:marked_list)
+    let l:marked_list = [a:str]
+  endif
+
+  for l:marked in l:marked_list
+    call ctrlp#acceptfile(a:mode, l:marked)
+  endfor
 endfunc
 
 let g:loaded_ctrlp_grep = 1
