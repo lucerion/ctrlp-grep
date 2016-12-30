@@ -6,11 +6,6 @@
 " Licence:      BSD-3-Clause
 " ==============================================================
 
-if (exists('g:loaded_ctrlp_grep') && g:loaded_ctrlp_grep) ||
-    \ (v:version < 700) || &compatible
-  finish
-endif
-
 call add(g:ctrlp_ext_vars, {
   \ 'init': 'ctrlp#grep#init()',
   \ 'accept': 'ctrlp#grep#accept',
@@ -46,5 +41,3 @@ func! ctrlp#grep#accept(mode, str)
     call ctrlp#acceptfile(a:mode, l:marked)
   endfor
 endfunc
-
-let g:loaded_ctrlp_grep = 1
