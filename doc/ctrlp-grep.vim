@@ -1,0 +1,111 @@
+*ctrlp-grep.txt*    CtrlP grep extension
+
+Author:           Alexander Skachko <alexander.skachko@gmail.com>
+Homepage:         https://github.com/lucerion/ctrlp-grep
+Version:          1.2.0 (2016-11-20)
+Licence:          BSD-3-Clause (see LICENSE)
+
+===============================================================================
+CONTENTS                                                           *ctrlp-grep*
+
+Install                                                    |ctrlp-grep-install|
+Commands                                                  |ctrlp-grep-commands|
+Options                                                    |ctrlp-grep-options|
+Changelog                                                |ctrlp-grep-changelog|
+License                                                    |ctrlp-grep-license|
+
+===============================================================================
+INSTALL                                                    *ctrlp-grep-install*
+
+Vundle                                https://github.com/VundleVim/Vundle.vim
+>
+    Plugin 'lucerion/ctrlp-grep'
+<
+Pathogen                                https://github.com/tpope/vim-pathogen
+>
+    cd ~/.vim/bundle
+    git clone https://github.com/lucerion/ctrlp-grep
+<
+NeoBundle                             https://github.com/Shougo/neobundle.vim
+>
+    NeoBundle 'lucerion/ctrlp-grep'
+<
+vim-plug                                 https://github.com/junegunn/vim-plug
+>
+    Plug 'lucerion/ctrlp-grep'
+<
+Manual
+>
+    git clone https://github.com/lucerion/ctrlp-grep
+<
+    copy all of the files into your ~/.vim directory
+
+===============================================================================
+COMMANDS                                                  *ctrlp-grep-commands*
+
+                                                                   *:CtrlPGrep*
+
+:CtrlPGrep {pattern} {directory}     Grep {pattern} in {directory} and open
+                                     results in CtrlP. Without {pattern}
+                                     word under cursor will be used. Default
+                                     directory is current directory ('.')
+
+===============================================================================
+OPTIONS                                                    *ctrlp-grep-options*
+
+                                                         *g:ctrlp_grep_command*
+
+Grep command
+
+Default: 'grep -rins'
+
+===============================================================================
+CHANGELOG                                                *ctrlp-grep-changelog*
+
+1.2.0 (2016-11-20)~
+
+  Changes
+    * multiple file select
+
+1.1.0 (2016-07-16)~
+
+  Changes
+    * use word under cursor if command called without pattern
+
+1.0.0 (2016-06-28)~
+
+  First release
+
+===============================================================================
+LICENSE                                                    *ctrlp-grep-license*
+
+Copyright © 2016, Alexander Skachko
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation and/or
+other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+===============================================================================
+vim:tw=78:ts=4:ft=help:norl:
