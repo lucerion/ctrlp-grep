@@ -15,22 +15,22 @@ call add(g:ctrlp_ext_vars, {
   \ 'opmul': 1
   \ })
 
-func! ctrlp#grep#run(...)
+func! ctrlp#grep#run(...) abort
   let l:pattern = get(a:000, 0, expand('<cword>'))
   let l:dirs = a:0 > 1 ? join(a:000[1:-1]) : '.'
   let s:result = system(g:ctrlp_grep_command . ' ' . l:pattern . ' ' . l:dirs)
   call ctrlp#init(ctrlp#grep#id())
 endfunc
 
-func! ctrlp#grep#init()
+func! ctrlp#grep#init() abort
   return split(s:result, "\n")
 endfunc
 
-func! ctrlp#grep#id()
+func! ctrlp#grep#id() abort
   return g:ctrlp_builtins + len(g:ctrlp_ext_vars)
 endfunc
 
-func! ctrlp#grep#accept(mode, str)
+func! ctrlp#grep#accept(mode, str) abort
   let l:marked_list = ctrlp#getmarkedlist()
 
   if empty(l:marked_list)
