@@ -57,7 +57,7 @@ OPTIONS                                                    *ctrlp-grep-options*
 
 Grep command
 
-Default: 'grep -rins'
+  Default value: 'grep -rins'
 
 ===============================================================================
 CHANGELOG                                                *ctrlp-grep-changelog*
