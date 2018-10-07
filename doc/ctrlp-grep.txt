@@ -70,7 +70,7 @@ CHANGELOG                                                *ctrlp-grep-changelog*
 1.1.0 (2016-07-16)~
 
   Changes
-    * use word under cursor if command called without pattern
+    * use word under cursor if command called without a pattern
 
 1.0.0 (2016-06-28)~
 
