@@ -17,6 +17,17 @@ License                                                    |ctrlp-grep-license|
 ===============================================================================
 INSTALL                                                    *ctrlp-grep-install*
 
+Vim packages (Vim 8, Neovim)
+>
+    mkdir -p ~/.vim/pack/lucerion/start
+    cd ~/.vim/pack/lucerion/start
+    git clone https://github.com/lucerion/ctrlp-grep
+<
+vim-plug                                 https://github.com/junegunn/vim-plug
+>
+    Plug 'lucerion/ctrlp-grep'
+<
+
 Vundle                                https://github.com/VundleVim/Vundle.vim
 >
     Plugin 'lucerion/ctrlp-grep'
@@ -26,13 +37,13 @@ Pathogen                                https://github.com/tpope/vim-pathogen
     cd ~/.vim/bundle
     git clone https://github.com/lucerion/ctrlp-grep
 <
+dein.vim                                   https://github.com/Shougo/dein.vim
+>
+    call dein#add('lucerion/ctrlp-grep')
+<
 NeoBundle                             https://github.com/Shougo/neobundle.vim
 >
     NeoBundle 'lucerion/ctrlp-grep'
-<
-vim-plug                                 https://github.com/junegunn/vim-plug
->
-    Plug 'lucerion/ctrlp-grep'
 <
 Manual
 >
